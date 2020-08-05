@@ -1,0 +1,57 @@
+/* Poppins 400,500,600 */
+/* Libre Baskerville 400,700 */
+/* Sacramento 400 */
+/* Wisdom */
+
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../webfonts/poppins-v12-latin-regular.woff2") format("woff2"), 
+       url("../webfonts/poppins-v12-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../webfonts/poppins-v12-latin-500.woff2") format("woff2"), 
+       url("../webfonts/poppins-v12-latin-500.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../webfonts/poppins-v12-latin-600.woff2") format("woff2"), 
+       url("../webfonts/poppins-v12-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../webfonts/libre-baskerville-v7-latin-regular.woff2") format("woff2"),
+       url("../webfonts/libre-baskerville-v7-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../webfonts/libre-baskerville-v7-latin-700.woff2") format("woff2"),
+       url("../webfonts/libre-baskerville-v7-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Sacramento";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../webfonts/sacramento-v7-latin-regular.woff2") format("woff2"),
+       url("../webfonts/sacramento-v7-latin-regular.woff") format("woff");
+}
