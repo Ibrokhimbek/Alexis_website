@@ -74,4 +74,99 @@ body {
   padding: 0 25px;
   margin: 0 auto;
 }
+
+.nav_usual {
+  background-color: #262732;
+}
+
+.nav_on_scroll {
+  -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+  -webkit-animation: onscroll 1.5s normal ease forwards;
+          animation: onscroll 1.5s normal ease forwards;
+}
+
+@-webkit-keyframes onscroll {
+  0% {
+    background-color: #262732;
+  }
+  100% {
+    background-color: #fff;
+    -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@keyframes onscroll {
+  0% {
+    background-color: #262732;
+  }
+  100% {
+    background-color: #fff;
+    -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+  }
+}
+
+.nav_box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.nav_box .nav_logo {
+  width: 10%;
+}
+
+.nav_box .nav_logo img {
+  widows: 100%;
+}
+
+.nav_box .navbar {
+  width: 70%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav_box .navbar .nav_item .nav_link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 27px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Poppins";
+  padding: 10px 0px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.nav_box .navbar .nav_item .nav_link:hover {
+  color: #fc5f45;
+}
 /*# sourceMappingURL=main.css.map */
