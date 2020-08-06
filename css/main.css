@@ -46,4 +46,32 @@
   font-display: swap;
   src: url("../webfonts/sacramento-v7-latin-regular.woff2") format("woff2"), url("../webfonts/sacramento-v7-latin-regular.woff") format("woff");
 }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-size: 15px;
+  line-height: 27px;
+  color: #616161;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=main.css.map */
