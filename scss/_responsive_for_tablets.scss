@@ -1,3 +1,113 @@
 @media (min-width: 768px) and (max-width: 1024px) {
+   // Navbar
+   #Navbar {
+    height: 70px;
+  }
+
+  .nav_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+  }
+
+  .navbar_toggler {
+    display: inline-block;
+  }
+
+  #open_btn,#close_btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+    
+  .navbar_toggler_white > button {
+    color: white;
+  }
   
+  .navbar_toggler_dark > button {
+    color: #262732;
+    animation: toggle 1s forwards normal ease;
+  }
+  
+  .navbar {
+    width: 250px !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #262732;
+    height: 100vh !important;
+    padding: 20px 25px;
+    padding-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .navbar_bg_white {
+    background-color: #fff;
+  }
+
+  .navbar_hide {
+    transform: translateX(900px);
+    animation: close 1.2s forwards normal ease-in-out;
+  }
+
+  .navbar_open {
+    transform: translateX(0);
+    animation: open 0.5s forwards normal ease-in-out;
+  }
+  
+  .nav_item:nth-child(1) {
+    visibility: visible;
+  }
+  
+  .nav_item {
+    width: 100%;
+  }
+
+  .nav_link {
+    width: 100%;
+  }
+
+  .nav_link:hover {
+    padding-left: 10%;
+  }
+
+  .nav_item:nth-child(1) > #close_btn{
+    text-align: right;
+    color: white;
+  }
+
+  .nav_item:nth-child(1) {
+    text-align: right;
+  }
+
+  @keyframes open {
+    from {
+      transform: translateX(800px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes close {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(800px);
+    }
+  }
+
+  @keyframes toggle {
+    from{
+      color: white;
+    }
+    to{
+      color: #262732;
+    }
+  }
+  // End of responsive navbar
 }

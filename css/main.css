@@ -77,6 +77,7 @@ body {
 
 nav {
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -208,7 +209,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .nav_box .nav_logo {
@@ -220,7 +221,7 @@ nav {
 }
 
 .nav_box .navbar {
-  width: 70%;
+  width: 80%;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,6 +259,152 @@ nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 18px 0;
+  }
+  .navbar_toggler {
+    display: inline-block;
+  }
+  #open_btn, #close_btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  .navbar_toggler_white > button {
+    color: white;
+  }
+  .navbar_toggler_dark > button {
+    color: #262732;
+    -webkit-animation: toggle 1s forwards normal ease;
+            animation: toggle 1s forwards normal ease;
+  }
+  .navbar {
+    width: 250px !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #262732;
+    height: 100vh !important;
+    padding: 20px 25px;
+    padding-bottom: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar_bg_white {
+    background-color: #fff;
+  }
+  .navbar_hide {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+    -webkit-animation: close 1.2s forwards normal ease-in-out;
+            animation: close 1.2s forwards normal ease-in-out;
+  }
+  .navbar_open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation: open 0.5s forwards normal ease-in-out;
+            animation: open 0.5s forwards normal ease-in-out;
+  }
+  .nav_item:nth-child(1) {
+    visibility: visible;
+  }
+  .nav_item {
+    width: 100%;
+  }
+  .nav_link {
+    width: 100%;
+  }
+  .nav_link:hover {
+    padding-left: 10%;
+  }
+  .nav_item:nth-child(1) > #close_btn {
+    text-align: right;
+    color: white;
+  }
+  .nav_item:nth-child(1) {
+    text-align: right;
+  }
+  @-webkit-keyframes open {
+    from {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes open {
+    from {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes close {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+  }
+  @keyframes close {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+  }
+  @-webkit-keyframes toggle {
+    from {
+      color: white;
+    }
+    to {
+      color: #262732;
+    }
+  }
+  @keyframes toggle {
+    from {
+      color: white;
+    }
+    to {
+      color: #262732;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #Navbar {
+    height: 70px;
+  }
+  .nav_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 18px 0;
   }
   .navbar_toggler {
     display: inline-block;

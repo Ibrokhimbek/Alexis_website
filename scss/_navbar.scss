@@ -1,6 +1,7 @@
 nav{
-  position: fixed;
   width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .navbar {
@@ -83,7 +84,7 @@ nav{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .nav_box .nav_logo {
   width: 10%;
@@ -94,7 +95,7 @@ nav{
 }
 
 .nav_box .navbar {
-  width: 70%;
+  width: 80%;
   list-style: none;
   display: flex;
   flex-direction: row;
