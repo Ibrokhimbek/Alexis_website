@@ -75,15 +75,75 @@ body {
   margin: 0 auto;
 }
 
+nav {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .nav_usual {
   background-color: #262732;
+  -webkit-animation: onscroll-reverse 1s normal ease forwards;
+          animation: onscroll-reverse 1s normal ease forwards;
+}
+
+.navbar_toggler {
+  display: none;
 }
 
 .nav_on_scroll {
   -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
-  -webkit-animation: onscroll 1.5s normal ease forwards;
-          animation: onscroll 1.5s normal ease forwards;
+  -webkit-animation: onscroll 1s normal ease forwards;
+          animation: onscroll 1s normal ease forwards;
+}
+
+.visually_hidden {
+  display: none;
+}
+
+.nav_item:nth-child(1) {
+  visibility: hidden;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 27px;
+  font-weight: 500;
+  font-family: "Poppins";
+  padding: 10px 0px;
+}
+
+.nav_box .navbar .nav_item .nav_link {
+  color: #fff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.nav_link_dark {
+  color: #262732 !important;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.nav_link_dark:hover {
+  color: #fc5f45;
 }
 
 @-webkit-keyframes onscroll {
@@ -105,6 +165,28 @@ body {
     background-color: #fff;
     -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
             filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@-webkit-keyframes onscroll-reverse {
+  0% {
+    background-color: #fff;
+    -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+  }
+  100% {
+    background-color: #262732;
+  }
+}
+
+@keyframes onscroll-reverse {
+  0% {
+    background-color: #fff;
+    -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.25));
+  }
+  100% {
+    background-color: #262732;
   }
 }
 
@@ -154,19 +236,151 @@ body {
           justify-content: space-between;
 }
 
-.nav_box .navbar .nav_item .nav_link {
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 27px;
-  color: #fff;
-  font-weight: 500;
-  font-family: "Poppins";
-  padding: 10px 0px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-}
-
 .nav_box .navbar .nav_item .nav_link:hover {
   color: #fc5f45;
+}
+
+@media (max-width: 767px) {
+  #Navbar {
+    height: 70px;
+  }
+  .nav_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar_toggler {
+    display: inline-block;
+  }
+  #open_btn, #close_btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  .navbar_toggler_white > button {
+    color: white;
+  }
+  .navbar_toggler_dark > button {
+    color: #262732;
+    -webkit-animation: toggle 1s forwards normal ease;
+            animation: toggle 1s forwards normal ease;
+  }
+  .navbar {
+    width: 250px !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #262732;
+    height: 100vh !important;
+    padding: 20px 25px;
+    padding-bottom: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar_bg_white {
+    background-color: #fff;
+  }
+  .navbar_hide {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+    -webkit-animation: close 1.2s forwards normal ease-in-out;
+            animation: close 1.2s forwards normal ease-in-out;
+  }
+  .navbar_open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation: open 0.5s forwards normal ease-in-out;
+            animation: open 0.5s forwards normal ease-in-out;
+  }
+  .nav_item:nth-child(1) {
+    visibility: visible;
+  }
+  .nav_item {
+    width: 100%;
+  }
+  .nav_link {
+    width: 100%;
+  }
+  .nav_link:hover {
+    padding-left: 10%;
+  }
+  .nav_item:nth-child(1) > #close_btn {
+    text-align: right;
+    color: white;
+  }
+  .nav_item:nth-child(1) {
+    text-align: right;
+  }
+  @-webkit-keyframes open {
+    from {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes open {
+    from {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes close {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+  }
+  @keyframes close {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(800px);
+              transform: translateX(800px);
+    }
+  }
+  @-webkit-keyframes toggle {
+    from {
+      color: white;
+    }
+    to {
+      color: #262732;
+    }
+  }
+  @keyframes toggle {
+    from {
+      color: white;
+    }
+    to {
+      color: #262732;
+    }
+  }
 }
 /*# sourceMappingURL=main.css.map */

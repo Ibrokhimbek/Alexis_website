@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexis</title>
+  <!-- Font Awesome stylesheet -->
+  <link rel="stylesheet" href="Font awesome free/css/all.min.css">
   <!-- Normalize stylesheet -->
   <link rel="stylesheet" href="css/normalize.css">
   <!-- Main stylesheet -->
@@ -12,39 +14,46 @@
 <body>
   
   <!-- Navbar -->
-  <nav class="nav_usual">
+  <nav class="nav_usual" id="Navbar">
     <div class="container">
       <div class="nav_box">
         <a href="index.html" class="nav_logo">
-          <img src="img/logo.png" alt="logo" width="97" height="27px">
-        </a>                                    
-        <ul class="navbar">
+          <img src="img/logo-for-dark.png" class="" id="LogoForDark" alt="logo" width="97" height="27px">
+          <img src="img/logo.png" class="visually_hidden" id="LogoLight" alt="logo" width="97" height="27px">
+        </a>  
+        <div class="navbar_toggler navbar_toggler_white">
+          <button id="open_btn"><i class="fas fa-bars fa-2x"></i></button>
+        </div>     
+        <ul class="navbar navbar_hide">
           <li class="nav_item">
-            <a href="" class="nav_link">About Us</a>
+            <button id="close_btn" class="navLink nav_link"><i class="fas fa-times fa-2x"></i></button>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Our Focus</a>
+            <a href="" class="navLink nav_link">Biz haqimizda</a>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Portfolio</a>
+            <a href="" class="navLink nav_link">Bizning e'tibor</a>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Our Team</a>
+            <a href="" class="navLink nav_link">Ishlarimiz</a>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Work Steps</a>
+            <a href="" class="navLink nav_link">Jamoamiz</a>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Pricing</a>
+            <a href="" class="navLink nav_link">Ish qismlarimiz</a>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Testimonials</a>
+            <a href="" class="navLink nav_link">Narxlar</a>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Blog</a>
+            <a href="" class="navLink nav_link">Mijozlar</a>
           </li>
           <li class="nav_item">
-            <a href="" class="nav_link">Contact</a>
+            <a href="" class="navLink nav_link">Blog</a>
+          </li>
+          <li class="nav_item">
+            <a href="" class="navLink nav_link">Aloqa</a>
           </li>
         </ul>
       </div>
@@ -53,5 +62,7 @@
   
   <!-- Main Javascript -->
   <script src="js/main.js"></script>
+  <!-- Font Awesome Javascript -->
+  <script src="Font awesome free/js/all.min.js"></script>
 </body>
 </html>
