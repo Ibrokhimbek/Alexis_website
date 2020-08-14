@@ -2,6 +2,7 @@ nav{
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 99999;
 }
 
 .navbar {
@@ -12,8 +13,7 @@ nav{
 }
 
 .nav_usual {
-  background-color: #262732;
-  animation: onscroll-reverse 1s normal ease forwards;
+  animation: onscroll-reverse 0.5s normal ease forwards;
 }
 
 .navbar_toggler {
@@ -22,7 +22,7 @@ nav{
 
 .nav_on_scroll {
   filter: drop-shadow(0 0 12px rgba(0,0,0,0.25));
-  animation: onscroll 1s normal ease forwards;
+  animation: onscroll 0.5s normal ease forwards;
 }
 
 .visually_hidden {
@@ -72,7 +72,7 @@ nav{
     filter: drop-shadow(0 0 12px rgba(0,0,0,0.25));
   }
   100% {
-    background-color: #262732;
+    background-color: transparent;
   }
 }
 
