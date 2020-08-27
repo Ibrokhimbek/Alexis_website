@@ -20,6 +20,7 @@
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
   }
     
   .navbar_toggler_white > button {
@@ -66,11 +67,11 @@
     width: 100%;
   }
 
-  .nav_link {
+  .navLink {
     width: 100%;
   }
 
-  .nav_link:hover {
+  .navLink:hover {
     padding-left: 10%;
   }
 

@@ -48,12 +48,12 @@ nav{
 }
 
 .nav_link_dark {
-  color: #262732 !important;
+  color: #262732;
   transition: all .5s ease;
 }
 
 .nav_link_dark:hover {
-  color: #fc5f45
+  color: #fc5f45;
 }
 
 @keyframes onscroll {

@@ -138,7 +138,7 @@ nav {
 }
 
 .nav_link_dark {
-  color: #262732 !important;
+  color: #262732;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
@@ -403,6 +403,17 @@ nav {
   -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.05));
           filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.05));
   background-color: #ffffff;
+  padding: 20px 40px;
+}
+
+.section_2 .section_2_box .section_2_content h2 {
+  font-size: 30px;
+}
+
+.section_2 .section_2_box .section_2_content p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 15px;
 }
 
 @media (max-width: 767px) {
@@ -432,6 +443,7 @@ nav {
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
   }
   .navbar_toggler_white > button {
     color: white;
@@ -479,10 +491,10 @@ nav {
   .nav_item {
     width: 100%;
   }
-  .nav_link {
+  .navLink {
     width: 100%;
   }
-  .nav_link:hover {
+  .navLink:hover {
     padding-left: 10%;
   }
   .nav_item:nth-child(1) > #close_btn {
